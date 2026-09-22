@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<title>Javel Media</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F6F2EA; font-family: 'Work Sans', sans-serif; color: #201C18; }
+  h1, h2, h3 { font-family: 'Fraunces', serif; margin: 0; }
+  a { text-decoration: none; }
+  .navlink { color: #201C18; font-weight: 600; font-size: 15px; }
+  .navlink:hover { color: #C7501F; }
+  .btn-primary:hover { filter: brightness(1.08); }
+  .btn-ghost:hover { background: rgba(32,28,24,0.06); }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(32,28,24,0.10); }
+  .social-btn:hover { border-color: #201C18; }
+  @media (max-width: 760px) {
+    .nav-links { display: none !important; }
+    .sec-nav { padding: 14px 16px !important; }
+    .sec { padding: 56px 20px !important; }
+    .sec-hero { padding: 72px 20px 40px !important; }
+    .hero-h1 { font-size: 40px !important; line-height: 1.15 !important; }
+    .hero-p { font-size: 17px !important; }
+    .kontakt-h2 { font-size: 30px !important; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr !important; gap: 28px !important; }
+  }
+  @media (max-width: 480px) {
+    .hero-h1 { font-size: 32px !important; }
+  }
+</style>
+</helmet>
+
+<div style="width: 100%; box-sizing: border-box; display: flex; flex-direction: column; background: #F6F2EA;">
+
+  <!-- NAV -->
+  <div style="position: sticky; top: 0; z-index: 20; width: 100%; box-sizing: border-box; background: rgba(246,242,234,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(32,28,24,0.08);">
+    <div class="sec-nav" style="max-width: 1180px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#top" style="display: flex; align-items: baseline; gap: 4px;">
+        <span style="font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; color: #201C18;">Javel</span>
+        <span style="font-family: 'Fraunces', serif; font-weight: 400; font-style: italic; font-size: 24px; color: {{accent}};">Media</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div class="nav-links" style="display: flex; align-items: center; gap: 32px;">
+        <a class="navlink" href="#om">Om oss</a>
+        <a class="navlink" href="#tjenester">Tjenester</a>
+        <a class="navlink" href="#pris">Pris</a>
+        <a class="navlink" href="#slikfunker">Slik funker det</a>
+        <a class="navlink" href="#team">Team</a>
+        </div>
+        <a class="navlink" href="#kontakt" style="padding: 10px 20px; border-radius: 999px; background: #201C18; color: #F6F2EA; white-space: nowrap;">Ta kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="top" class="sec-hero" style="max-width: 1180px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 96px 32px 72px; display: flex; flex-direction: column; align-items: flex-start; gap: 28px;">
+    <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(32,28,24,0.18); font-size: 14px; font-weight: 600; letter-spacing: 0.02em;">
+      <span style="width: 8px; height: 8px; border-radius: 999px; background: {{accent}};"></span>
+      Opplæringsvideoer for bedrifter
+    </div>
+    <h1 class="hero-h1" style="font-size: 68px; line-height: 1.05; font-weight: 600; max-width: 780px;">
+      "Javel, sånn gjør vi det."
+    </h1>
+    <p class="hero-p" style="font-size: 20px; line-height: 1.6; max-width: 620px; color: #45403A;">
+      Vi lager korte, tydelige opplæringsvideoer som gjør nyansatte klare for jobben — uten at en supervisor må vise det samme for tiende gang. Kasse, varemottak, HMS-rutiner: filmet der dere jobber, ferdig på dager, ikke uker.
+    </p>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px;">
+      <a class="btn-primary" href="#kontakt" style="padding: 16px 32px; border-radius: 999px; background: {{accent}}; color: #FFFFFF; font-weight: 700; font-size: 16px; transition: filter 0.15s;">Book en uforpliktende prat</a>
+      <a class="btn-ghost" href="#slikfunker" style="padding: 16px 32px; border-radius: 999px; border: 1px solid rgba(32,28,24,0.25); color: #201C18; font-weight: 600; font-size: 16px; transition: background 0.15s;">Slik funker det</a>
+    </div>
+  </div>
+
+  <!-- OM OSS -->
+  <div id="om" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid rgba(32,28,24,0.08); border-bottom: 1px solid rgba(32,28,24,0.08);">
+    <div class="sec grid-2" style="max-width: 1180px; margin: 0 auto; padding: 88px 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: start;">
+      <div>
+        <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}; margin-bottom: 16px;">Om oss</div>
+        <h2 style="font-size: 38px; font-weight: 600; line-height: 1.15;">To folk, kamera og et ferdig manus — det er hele oppskriften.</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px; font-size: 17px; line-height: 1.7; color: #45403A;">
+        <p style="margin: 0;">
+          Javel Media startet fordi vi så det samme problemet på tvers av butikker og bedrifter: opplæring av nyansatte tar tid, blir gjort litt forskjellig fra person til person, og må gjentas hver eneste gang noen slutter.
+        </p>
+        <p style="margin: 0;">
+          Vi kommer til dere, filmer de reelle rutinene deres — kassaapparatet, lageret, HMS-rundene — og leverer korte videoer alle nyansatte kan se før de starter på gulvet.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TJENESTER -->
+  <div id="tjenester" style="width: 100%; box-sizing: border-box;">
+    <div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 96px 32px;">
+      <div style="max-width: 620px; margin-bottom: 56px;">
+        <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}; margin-bottom: 16px;">Hva vi lager</div>
+        <h2 style="font-size: 38px; font-weight: 600; line-height: 1.15;">Én video, samme svar — hver gang.</h2>
+      </div>
+      <div class="grid-2" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+        <div class="card" style="background: #FFFFFF; border-radius: 20px; padding: 32px; border: 1px solid rgba(32,28,24,0.08); transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">Kasse &amp; betaling</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45403A;">Steg-for-steg gjennomgang av kassesystem, kortterminal og vanlige feilsituasjoner.</p>
+        </div>
+        <div class="card" style="background: #FFFFFF; border-radius: 20px; padding: 32px; border: 1px solid rgba(32,28,24,0.08); transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">Varemottak &amp; lager</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45403A;">Fra levering til hylle — riktig rutine vist i praksis, ikke bare forklart på papir.</p>
+        </div>
+        <div class="card" style="background: #FFFFFF; border-radius: 20px; padding: 32px; border: 1px solid rgba(32,28,24,0.08); transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">HMS &amp; sikkerhet</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45403A;">Rutiner som faktisk blir husket, fordi de er vist — ikke bare skrevet i en perm.</p>
+        </div>
+        <div class="card" style="background: #FFFFFF; border-radius: 20px; padding: 32px; border: 1px solid rgba(32,28,24,0.08); transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">Produkt &amp; kundeservice</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45403A;">Gi nyansatte svarene før kunden rekker å spørre.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIS -->
+  <div id="pris" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid rgba(32,28,24,0.08); border-bottom: 1px solid rgba(32,28,24,0.08);">
+    <div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 96px 32px;">
+      <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 16px;">
+        <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}};">Pris</div>
+        <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; background: rgba(199,80,31,0.10); color: {{accent}}; font-size: 12px; font-weight: 700; letter-spacing: 0.02em;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="{{accent}}" stroke-width="2" stroke-linejoin="round"></path><path d="m9 12 2 2 4-4" stroke="{{accent}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Fastpris-garanti
+        </div>
+      </div>
+      <h2 style="font-size: 38px; font-weight: 600; line-height: 1.15; margin-bottom: 48px; max-width: 620px;">Enkelt å velge, ingen overraskelser.</h2>
+
+      <div class="grid-2" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+        <div class="card" style="background: #FBF9F4; border-radius: 20px; padding: 32px; border: 1px solid rgba(32,28,24,0.08); transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 19px; font-weight: 600; margin-bottom: 8px;">Én video</h3>
+          <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.5; color: #6B655C;">1 opplæringsvideo</p>
+          <div style="font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700;">6 900 kr</div>
+        </div>
+        <div class="card" style="background: #FBF9F4; border-radius: 20px; padding: 32px; border: 2px solid {{accent}}; transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 19px; font-weight: 600; margin-bottom: 8px;">Oppstartspakke</h3>
+          <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.5; color: #6B655C;">3 videoer</p>
+          <div style="font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700;">14 900 kr</div>
+        </div>
+        <div class="card" style="background: #FBF9F4; border-radius: 20px; padding: 32px; border: 1px solid rgba(32,28,24,0.08); transition: transform 0.15s, box-shadow 0.15s;">
+          <h3 style="font-size: 19px; font-weight: 600; margin-bottom: 8px;">Full opplæringspakke</h3>
+          <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.5; color: #6B655C;">5–6 videoer</p>
+          <div style="font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700;">22 900 kr</div>
+        </div>
+      </div>
+
+      <p style="margin: 32px 0 0; font-size: 15px; line-height: 1.6; color: #6B655C; max-width: 720px;">
+        Prisen varierer noe ut fra omfanget på prosjektet — antall ansatte som filmes, antall lokasjoner, hvor komplekse rutinene er, og om dere ønsker undertekster eller voiceover. Men vi avtaler alltid endelig pris med dere før vi setter i gang, så det blir ingen overraskelser.
+      </p>
+    </div>
+  </div>
+
+  <!-- SLIK FUNKER DET -->
+  <div id="slikfunker" style="width: 100%; box-sizing: border-box; background: #201C18;">
+    <div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 96px 32px; color: #F6F2EA;">
+      <div style="max-width: 620px; margin-bottom: 56px;">
+        <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}; margin-bottom: 16px;">Prosessen</div>
+        <h2 style="font-size: 38px; font-weight: 600; line-height: 1.15; color: #F6F2EA;">Fra prat til ferdig video på tre steg.</h2>
+      </div>
+      <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px;">
+        <div>
+          <div style="font-family: 'Fraunces', serif; font-size: 44px; font-weight: 700; color: {{accent}}; margin-bottom: 12px;">01</div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #F6F2EA; margin-bottom: 8px;">Kartlegging</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #CFC8BC;">Vi møtes, ser på rutinene deres og blir enige om hva videoene skal dekke.</p>
+        </div>
+        <div>
+          <div style="font-family: 'Fraunces', serif; font-size: 44px; font-weight: 700; color: {{accent}}; margin-bottom: 12px;">02</div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #F6F2EA; margin-bottom: 8px;">Filming</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #CFC8BC;">Vi filmer på stedet, med deres folk og deres utstyr — som det faktisk er.</p>
+        </div>
+        <div>
+          <div style="font-family: 'Fraunces', serif; font-size: 44px; font-weight: 700; color: {{accent}}; margin-bottom: 12px;">03</div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #F6F2EA; margin-bottom: 8px;">Levering</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #CFC8BC;">Ferdig klippet video, klar til å vises til neste nyansatte — på repeat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div id="team" style="width: 100%; box-sizing: border-box; background: #FFFFFF; border-bottom: 1px solid rgba(32,28,24,0.08);">
+    <div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 96px 32px;">
+      <div style="max-width: 620px; margin-bottom: 56px;">
+        <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}; margin-bottom: 16px;">Teamet</div>
+        <h2 style="font-size: 38px; font-weight: 600; line-height: 1.15;">Folkene bak kamera.</h2>
+      </div>
+      <div class="grid-2" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; max-width: 680px;">
+
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+          <div style="width: 168px; height: 168px; border-radius: 999px; background: #EDE7DA; border: 2px dashed rgba(32,28,24,0.25); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 15px; color: #6B655C; text-align: center; padding: 12px; box-sizing: border-box;">[Bilde av Terje]</div>
+          <div>
+            <h3 style="font-size: 19px; font-weight: 600;">Terje</h3>
+            <p style="margin: 6px 0 0; font-size: 15px; color: #6B655C;">[Kort om Terjes rolle]</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+          <div style="width: 168px; height: 168px; border-radius: 999px; background: #EDE7DA; border: 2px dashed rgba(32,28,24,0.25); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 15px; color: #6B655C; text-align: center; padding: 12px; box-sizing: border-box;">[Bilde av Morten]</div>
+          <div>
+            <h3 style="font-size: 19px; font-weight: 600;">Morten</h3>
+            <p style="margin: 6px 0 0; font-size: 15px; color: #6B655C;">[Kort om Mortens rolle]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SOSIALT / SE OSS I AKSJON -->
+  <div style="width: 100%; box-sizing: border-box;">
+    <div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 88px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
+      <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}};">Følg med</div>
+      <h2 style="font-size: 34px; font-weight: 600; max-width: 560px;">Se smakebiter og bak kulissene på YouTube og Facebook.</h2>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
+        <a class="social-btn" href="#" aria-label="Javel Media på YouTube" style="display: flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(32,28,24,0.25); color: #201C18; font-weight: 600; font-size: 15px; transition: border-color 0.15s;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 12c0-2.2-.2-3.6-.5-4.6-.3-.9-1-1.6-1.9-1.9C18 5 12 5 12 5s-6 0-7.6.5c-.9.3-1.6 1-1.9 1.9C2.2 8.4 2 9.8 2 12s.2 3.6.5 4.6c.3.9 1 1.6 1.9 1.9C6 19 12 19 12 19s6 0 7.6-.5c.9-.3 1.6-1 1.9-1.9.3-1 .5-2.4.5-4.6Z" stroke="#201C18" stroke-width="1.5"></path><path d="M10 9.5v5l4.5-2.5-4.5-2.5Z" fill="#201C18"></path></svg>
+          YouTube <span style="font-weight: 400; color: #6B655C;">(kanal kommer)</span>
+        </a>
+        <a class="social-btn" href="#" aria-label="Javel Media på Facebook" style="display: flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(32,28,24,0.25); color: #201C18; font-weight: 600; font-size: 15px; transition: border-color 0.15s;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 8.5h2V5.4c-.35-.05-1.5-.15-2.85-.15-2.82 0-4.75 1.72-4.75 4.9V13H6.5v3.5h2.9V22h3.6v-5.5h2.8l.45-3.5h-3.25v-2.5c0-1 .28-1.7 1.7-1.7Z" stroke="#201C18" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+          Facebook <span style="font-weight: 400; color: #6B655C;">(side kommer)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- KONTAKT -->
+  <div id="kontakt" style="width: 100%; box-sizing: border-box; background: {{accent}};">
+    <div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px;">
+      <h2 class="kontakt-h2" style="font-size: 40px; font-weight: 600; color: #FFFFFF; max-width: 560px; line-height: 1.15;">Klar for opplæring som faktisk sitter?</h2>
+      <p style="font-size: 18px; color: rgba(255,255,255,0.9); max-width: 520px; line-height: 1.6;">Fortell oss hvordan dere lærer opp nyansatte i dag, så tar vi en uforpliktende prat om hvordan en pilotvideo kan frigjøre kapasitet hos dere.</p>
+      <a href="mailto:kontakt@javelmedia.no" style="margin-top: 8px; padding: 16px 36px; border-radius: 999px; background: #201C18; color: #FFFFFF; font-weight: 700; font-size: 16px;">kontakt@javelmedia.no</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="width: 100%; box-sizing: border-box; background: #201C18;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <span style="font-family: 'Fraunces', serif; font-size: 16px; color: #F6F2EA;">Javel Media</span>
+      <span style="font-size: 14px; color: #8A837A;">© 2026 Javel Media. Opplæringsvideoer for bedrifter.</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C7501F","options":["#C7501F","#1F7A5C","#2A4C8F","#8A2E2E"]},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#C7501F'
+    };
+  }
+}
+</script>
+</body>
+</html>
